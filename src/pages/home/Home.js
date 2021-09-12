@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import Header from "../../components/header/Header"
-import { MainContainer} from './HomeStyle'
+import { HomeImg, ImgDiv, MainContainer} from './HomeStyle'
 import axios from "axios"
 import RecipeCardComp from './RecipeCardComp'
-
+import homeSvg from "../../assets/home.svg"
 
 // We use mealTypes for select attribute 
 const mealTypes = ["Breaktfast","Lunch","Dinner","Snack","Teatime"]
@@ -52,7 +52,9 @@ const Home = () => {
                 ))}
             </MainContainer>
 
-            ): null}
+            ): <ImgDiv>
+                <HomeImg src={homeSvg}/>
+            </ImgDiv>}
         </div>
     )
 }
