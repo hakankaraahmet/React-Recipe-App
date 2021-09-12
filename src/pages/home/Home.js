@@ -47,8 +47,8 @@ const Home = () => {
             {recipes ? (
             <MainContainer>
                 {/* We send recipes (data from api) to recipeCardComp with map function */}
-                {recipes.map((recipe,index) => (
-                    <RecipeCardComp key = {index} recipe = {recipe.recipe}/>
+                {recipes?.map((recipe,index) => (
+                    <RecipeCardComp key = {index} recipe = {recipe?.recipe}/>
                 ))}
             </MainContainer>
 
